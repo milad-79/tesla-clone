@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities{
+  .sidebar{
+    height: 100vh;
+    top: 0;
+    z-index: 100;
+  }
+
+  .notActive{
+    right: -260px;
+    transition: all .6s;
+  }
+
+  .active{
+    right: 0px;
+    transition: all .6s;
+  }
+
+  .show{
+    animation: Show .5s ease-in;
+    opacity: 1;
+  }
+
+
+  @keyframes Show {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
+  .hiddenElelment{
+    animation: Hidden .5s ease-in;
+    opacity: 0;
+  }
+
+
+  @keyframes Hidden {
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+}
